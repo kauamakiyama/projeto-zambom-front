@@ -1,0 +1,101 @@
+.dados-page {
+  min-height: 100vh;
+  background-color: #F5F5DC;
+  padding: calc(var(--kh-header-h, 96px) + 60px) 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.dados-header {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.dados-title {
+  margin: 0;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  color: #4a1f0e;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.dados-divider {
+  width: 10rem;
+  opacity: 0.9;
+}
+
+.dados-card {
+  width: clamp(45rem, 80vw, 61.25rem);
+  min-height: 28.75rem;
+  margin: 2.5rem auto 0.75rem;
+  background: #e3dfcc;
+  border: 0.125rem solid #b7b09a;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,.15);
+  padding: 1.375rem 1.375rem 1.625rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.125rem 1.5rem;
+}
+
+.col { display: grid; gap: 0.625rem; }
+.dados-label { font-weight: 700; color: #4a1f0e; font-size: 1.25rem; }
+.dados-input {
+  height: 2.375rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #c8c1ac;
+  background: #fff;
+  padding: 0 0.75rem;
+  color: #472304;
+  font-size: 1rem;
+}
+.dados-password {
+  height: 2.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #c8c1ac;
+  background: #fff;
+  color: #472304;
+}
+.eye { opacity: .7; }
+
+@media (max-width: 48rem) {
+  .dados-page {
+    padding: calc(var(--kh-header-h, 96px) + 40px) 1rem 1rem;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .dados-card {
+    width: 100%;
+    margin: 0;
+    padding: 1.375rem 1.375rem 1.625rem;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    min-height: auto;
+  }
+  
+  .dados-header {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .dados-header { margin-bottom: 0.75rem; }
+}
